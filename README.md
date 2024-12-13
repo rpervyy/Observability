@@ -20,3 +20,5 @@
 
 ## Установка prometheus
 Prometheus был также установлен из deb пакета.
+
+![prometheus](/img/prometheus.png "экспортеры подключенные к prometheus")
