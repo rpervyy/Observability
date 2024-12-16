@@ -1,0 +1,27 @@
+multitenancy_enabled: false
+
+common:
+  storage:
+    backend: s3
+    s3:
+      endpoint: 192.168.10.146:9000
+      access_key_id: ROOTNAME
+      secret_access_key: CHANGEME123
+      insecure: true
+
+blocks_storage:
+  storage_prefix: blocks
+  s3:
+    bucket_name: mimir
+
+ruler_storage:
+  backend: filesystem
+  filesystem:
+    dir: /tmp/mimir/rules
+
+server:
+  http_listen_port: 9009
+  log_level: warn
+
+limits:
+  compactor_blocks_retention_period: 14d
